@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="620.0" maxWidth="1040.0" prefHeight="620.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController">
+   <center>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" prefHeight="496.0" stylesheets="@../css/scrollpane.css" vbarPolicy="ALWAYS" vmin="1.0" vvalue="1.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <JFXTextArea fx:id="txtarea" editable="false" focusColor="#121c11" labelFloat="true" stylesheets="@../css/textarea.css" unFocusColor="#e74c3c">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextArea>
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="100.0" style="-fx-background-color: #031c30;" VBox.vgrow="NEVER">
+               <children>
+                  <JFXTextField fx:id="txtfield" focusColor="#5ca840" onAction="#btn" prefHeight="36.0" prefWidth="631.0" stylesheets="@../css/textfield.css" unFocusColor="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="sent" buttonType="RAISED" onAction="#btn" prefHeight="36.0" prefWidth="120.0" ripplerFill="#bc1c1c" stylesheets="@../css/button.css" text="Sent" textFill="WHITE" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="112.0">
+                     <children>
+                        <Label text="Label" textFill="#031c30" />
+                        <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assert/icons8-camera-96.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Label" textFill="#031c30" />
+                        <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assert/icons8-microphone-64.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="16.0" prefWidth="0.0" text="Label" textFill="#031c30" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox maxHeight="1.7976931348623157E308" styleClass="space" stylesheets="@../css/vbox.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="onlineUsersHbox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="217.0" stylesheets="/css/ComboBox.css">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="124.0" text="Online Users:" textAlignment="CENTER" textFill="#fc6747">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" />
+                     </opaqueInsets>
+                  </Label>
+                  <Label fx:id="onlineCountLabel" prefHeight="48.0" prefWidth="94.0" text="0" textFill="#fc6747">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="217.0" style="-fx-background-color: #e74c3c;" text="User 1" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="217.0" style="-fx-background-color: #e74c3c;" text="User 2" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="217.0" style="-fx-background-color: #e74c3c;" text="User 3" textFill="WHITE" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </left>
+   <top>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="1040.0" style="-fx-background-color: #031c30;" BorderPane.alignment="CENTER">
+         <left>
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="207.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="userImageView" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assert/icons8-change-user-80.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox alignment="CENTER_LEFT" prefHeight="103.0" prefWidth="101.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="usernameLabel" text="Sonal" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="31.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assert/icons8-menu-vertical-96.png" />
+                     </image>
+                  </ImageView>
+               </children></HBox>
+         </left>
+         <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="83.0" prefWidth="188.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assert/icons8-phone-96.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="16.0" prefWidth="10.0" text="Label" />
+                  <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assert/icons8-no-video-96.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assert/icons8-menu-vertical-96.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+</BorderPane>

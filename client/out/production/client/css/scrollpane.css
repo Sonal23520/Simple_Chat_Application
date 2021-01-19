@@ -1,0 +1,6 @@
+.scroll-bar:vertical .thumb {
+    -fx-background-color: white;
+    -fx-background-radius: 5em;
+    -fx-border-color: #031c30;
+    -fx-border-radius: 5em;
+}
